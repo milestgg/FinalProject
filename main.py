@@ -13,8 +13,8 @@ from requests import post, get
 import json
 
 
-PLAYLIST_ID = '2dTgt03NKtm7ulBPcdzZI1'
-#PLAYLIST_ID = '6UeSakyzhiEt4NB3UAd6NQ'
+#PLAYLIST_ID = '2dTgt03NKtm7ulBPcdzZI1'
+PLAYLIST_ID = '6UeSakyzhiEt4NB3UAd6NQ'
 
 
 
@@ -89,8 +89,10 @@ def main():
                       })
     
     
-    for i in range(len(songs)):                             # prints list of songs
-       print(f'{songs[i]["rank"]}. {songs[i]["name"]}\n    By: {songs[i]["artist"]}\n    {songs[i]["id"]}\n')
+    #for i in range(len(songs)):                             # prints list of songs
+    #   print(f'{songs[i]["rank"]}. {songs[i]["name"]}\n    By: {songs[i]["artist"]}\n    {songs[i]["id"]}\n')
+    
+
 
 
 
