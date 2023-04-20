@@ -64,6 +64,17 @@ class GUI(tk.Tk):
         self.back_button3 = tk.Button(self.helpscreen, text="Back", fg="white", bg="blue", font=("Arial", 20), command=self.show_screen1)
         self.back_button3.pack(side="left")
 
+
+        self.screen3.title("Flashing Screen")
+        self.screen3.geometry("400x400")
+        self.screen3.color_index = 0
+        self.screen3.colors = ["red", "green", "blue"]
+        self.screen3.flash()
+
+    def flash(self):
+        self.configure(background=self.colors[self.color_index])
+        self.color_index = (self.color_index + 1) % len(self.colors)
+        self.after(500, self.flash)
         # Show screen 1
         self.screen1.pack()
  #need to change screens
