@@ -23,11 +23,11 @@ class GUI(tk.Tk):
         self.label1.pack(padx=50, pady=50)
 
     
-        self.label2 = tk.Label(self.screen2, text="Type which songs you like!", fg="black", font=("Arial", 30))
+        self.label2 = tk.Label(self.screen2, text="Type the number of which songs you like!", fg="black", font=("Arial", 30))
         self.label2.pack(padx=50, pady=50)
 
 
-        self.label3 = tk.Label(self.screen3, text="Screen 3", fg="black", font=("Arial", 30))
+        self.label3 = tk.Label(self.screen3, text="Here is your custom playlist!", fg="black", font=("Arial", 30))
         self.label3.pack(padx=50, pady=50)
         
         self.labelhelp = tk.Label(self.helpscreen, text="Help", fg="black", font=("Arial", 30))
