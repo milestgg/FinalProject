@@ -1,0 +1,18 @@
+@startuml
+
+:User: --> :Software: : Spotify Credentials
+
+:Software: <- (Spotify Playlist)
+(External Metadata) -> :Software:
+
+:Software: --> (Algorithm) : Selected Songs
+(Algorithm) ----> (Algorithm) : Matches Closest Metadata Values
+(Algorithm) ----> (Algorithm) : Matches Closest Values to Metadata Averages
+
+(Algorithm) --> (Data Compiler)
+
+(Data Compiler) ---> User : Recommended Songs Presented on GUI
+
+
+
+@enduml
