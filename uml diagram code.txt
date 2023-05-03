@@ -1,0 +1,13 @@
+@startuml
+skinparam actorStyle hollow
+:User: --> (Main Menu)
+(Main Menu) --> (Song Selector) : Create new\nplaylist
+(Account) -> (User Guide) : Selected help\nbutton
+(Error) --> (Song Selector) : Less than 10\nsongs selected
+(Error) --> (Song Selector) : More than 15\nsongs selected
+(Song Selector) --> (Music Algorithm) : songs\nselected
+(Music Algorithm) --> (New Playlist) : Generates\nsong list
+(New Playlist) ---> (Account) : Saved Playlist
+
+
+@enduml
