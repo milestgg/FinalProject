@@ -28,37 +28,26 @@ class GUI(tk.Tk):
         self.notebook = ttk.Notebook(self.content)
         self.notebook.pack(fill="both", expand=True, padx=10, pady=10)
 
-<<<<<<< HEAD
         # Create the screens
         self.screen1 = tk.Frame(self.notebook, bg="#FFDAB9")
         self.screen2 = tk.Frame(self.notebook, bg="#FFDAB9")
         self.screen3 = tk.Frame(self.notebook, bg="#FFDAB9")
         self.helpscreen = tk.Frame(self.notebook, bg="#FFDAB9")
-=======
-    
-        self.label2 = tk.Label(self.screen2, text="Type the number of which songs you like!", fg="black", font=("Arial", 30))
-        self.label2.pack(padx=50, pady=50)
->>>>>>> 124e20d2aae20fb4b72d4ed72986143736f064ce
 
         self.notebook.add(self.screen1, text="Screen 1")
         self.notebook.add(self.screen2, text="Screen 2")
         self.notebook.add(self.screen3, text="Screen 3")
         self.notebook.add(self.helpscreen, text="Help")
 
-<<<<<<< HEAD
-        # Add widgets to screen 1
+        
         self.label1 = tk.Label(self.screen1, text="Welcome to FluidMusic!", fg="#0074D9", font=("Arial", 30), bg="#FFDAB9")
         self.label1.pack(padx=50, pady=(50, 0))
         def set_x(value):
             global x
             x = value
             print(f"x is now {x}")
-=======
-        self.label3 = tk.Label(self.screen3, text="Here is your custom playlist!", fg="black", font=("Arial", 30))
-        self.label3.pack(padx=50, pady=50)
->>>>>>> 124e20d2aae20fb4b72d4ed72986143736f064ce
         
-        # Create three buttons, each with a different value for x
+        # 3 buttons for each playlist
         button11 = tk.Button(self.screen1, text="Playlist 1", fg="white", bg="#0074D9", font=("Arial", 20), command=lambda: set_x(1))
         button11.pack(pady=10)
         
@@ -74,7 +63,6 @@ class GUI(tk.Tk):
         self.next_button1 = tk.Button(self.screen1, text="Get started", fg="white", bg="#0074D9", font=("Arial", 20), command=self.show_screen2)
         self.next_button1.pack(side="bottom", pady=(0, 10))
 
-        # Add widgets to screen 2
         self.label2 = tk.Label(self.screen2, text="What songs do you like?", fg="#0074D9", font=("Arial", 30), bg="#FFDAB9")
         self.label2.pack(padx=50, pady=(50, 0))
 
@@ -109,17 +97,6 @@ class GUI(tk.Tk):
         self.back_button3 = tk.Button(self.helpscreen, text="Back", fg="white", bg="#0074D9", font=("Arial", 20), command=self.show_screen1)
         self.back_button3.pack(side="left", padx=10)
 
-
-        self.screen3.title("Flashing Screen")
-        self.screen3.geometry("400x400")
-        self.screen3.color_index = 0
-        self.screen3.colors = ["red", "green", "blue"]
-        self.screen3.flash()
-
-    def flash(self):
-        self.configure(background=self.colors[self.color_index])
-        self.color_index = (self.color_index + 1) % len(self.colors)
-        self.after(500, self.flash)
         # Show screen 1
         self.show_screen1()
 
